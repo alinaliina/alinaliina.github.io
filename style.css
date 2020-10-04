@@ -30,6 +30,8 @@ body {
 
 #content-page {
     padding-top: 5%;
+    min-height: 100%;
+    margin-bottom: -50px;
 }
 
 #top {
@@ -84,13 +86,16 @@ a:visited {
 
 /* Footer */
 
+#footer, .push-footer {
+  height: 50px;
+}
+
 #footer {
     text-align: center;
-    position: relative;
     width: 100%;
     font-size: 15px;
     color: grey;
-    height: 100px;
+    margin-top: -50px;
 }
 
 /* Startseite */
