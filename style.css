@@ -1,0 +1,291 @@
+/* allgemein & cursor */
+
+body {
+    font-family: "Poppins",sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0 2% 2% 2%;
+    font-size: 17px;
+    font-weight: 100;
+    cursor: none;
+    height: 100%;
+    min-height: 100%;
+  }
+
+#name {
+    display: inline;
+    font-size: 17px;
+    text-decoration: none;
+    color: white;
+  }
+
+#name:hover {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#name:hover ~ .cursor {
+    transform: translate(-50%, -50%) scale(8);
+}
+
+#content-page {
+    padding-top: 5%;
+}
+
+#top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2%;
+    text-decoration: none;
+    position: fixed;
+    width: 96%;
+    background-color: black;
+    padding-top: 2%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: none;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    padding: 1.1rem;
+    background-color: white;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease;
+    z-index: 999;
+}
+
+/* Navigation */
+
+#navigation a {
+        color: white;
+        padding: 1%;
+        display: inline-block;
+        padding: 0px 20px;
+        text-decoration: none;
+        cursor: none;
+    }
+
+#navigation a:hover {
+    font-weight: 600;
+}
+
+/* Footer */
+
+#footer {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+    color: grey;
+    height: 100px;
+}
+
+/* Startseite */
+
+.image {
+    display: none;
+  }
+
+.project {
+   display: grid;
+   grid-template-columns: 35% 20% 20%;
+   grid-template-rows: 20% 20% 20%;
+   position: relative;
+   text-decoration: none;
+}
+
+p:hover {
+    background-color: #FA0002;
+    color: black;
+    font-weight: 400;
+    padding-left: 5px;
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+}
+
+.project:hover ~ .image {
+    display: block;
+    position: absolute;
+    right: 2%;
+  }
+
+/* Info-Seite */
+
+.info {
+    margin-top: 17px;
+}
+
+b {
+    font-weight: 700;
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: 240px 500px;
+}
+
+/* Hör die Stille */
+ 
+.image-container {
+    margin-top: 17px;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 31.3% 31.3% 31.3%;
+    grid-template-rows: 300px 300px 300px 300px 300px 300px 300px;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.hoerdiestille-text {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1; 
+    font-size: 15px;
+    position: fixed;
+}
+
+.hoerdiestille1 {
+    grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.hoerdiestille1 > img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+  }
+
+.hoerdiestille2 {
+    overflow: hidden;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.hoerdiestille2 > img {
+    object-fit: cover;
+    width: 110%;
+    max-height: 100%;
+  }
+
+.hoerdiestille3 {
+    overflow: hidden;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.hoerdiestille3 > img {
+    object-fit: cover;
+    width: 110%;
+    max-height: 100%;
+  }
+
+.hoerdiestille4 {
+    overflow: hidden;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.hoerdiestille4 > img {
+    object-fit: cover;
+    width: 110%;
+    max-height: 100%;
+  }
+
+.hoerdiestille5 {
+    overflow: hidden;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.hoerdiestille5 > img {
+    object-fit: cover;
+    width: 110%;
+    max-height: 100%;
+  }
+
+.hoerdiestille6 {
+    overflow: hidden;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.hoerdiestille6 > img {
+    object-fit: cover;
+    width: 110%;
+    max-height: 100%;
+  }
+
+.hoerdiestille7 {
+    overflow: hidden;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+.hoerdiestille7 > img {
+    object-fit: cover;
+    width: 110%;
+    max-height: 100%;
+  }
+
+.hoerdiestille8 {
+    overflow: hidden;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 7;
+}
+
+.hoerdiestille8 > img {
+    object-fit: cover;
+    width: 110%;
+    max-height: 100%;
+  }
+
+.hoerdiestille9 {
+    overflow: hidden;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 7;
+}
+
+.hoerdiestille9 > img {
+    object-fit: cover;
+    width: 110%;
+    max-height: 100%;
+  }
+
+.nextproject {
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 30px;
+}
