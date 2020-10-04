@@ -171,15 +171,16 @@ b {
 }
 
 .hoerdiestille1 {
+    overflow: hidden;
     grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 3;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 .hoerdiestille1 > img {
     object-fit: cover;
-    width: 100%;
+    width: 110%;
     max-height: 100%;
   }
 
