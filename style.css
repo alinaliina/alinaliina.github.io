@@ -9,7 +9,6 @@ body {
     font-family: "Poppins",sans-serif;
     background-color: black;
     color: white;
-    font-weight: 100;
     height: 100%;
     min-height: 100%;
   }
@@ -31,19 +30,22 @@ a {
     text-decoration: none;
 }
 
+a {
+    display: block;
+    text-decoration: none;
+    font-weight: normal;
+  }           
+  a:link {
+    color: inherit;
+  }
 
-/* Allgemein ab 768px */
+/* Allgemein Desktop/tablet */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
 
     body {
-        cursor: none;
         margin: 0 2% 2% 2%;
         font-size: 17px;
-    }
-
-    a:hover {
-        cursor: none;
     }
     
     a:visited {
@@ -68,9 +70,9 @@ a {
 
 }
 
-/* Allgemein bis 768px (mobile) */
+/* Allgemein mobil */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     body {
         margin: 0 5% 5% 5%;
         font-size: 15px;
@@ -104,21 +106,9 @@ a {
 
 }
 
-/* Navigation & Header ab 768px */
+/* Navigation & Header Desktop */
 
-@media only screen and (min-width: 768px) {
-
-    #top {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 2%;
-        text-decoration: none;
-        position: fixed;
-        width: 96%;
-        background-color: black;
-        padding-top: 2%;
-        z-index: 10;
-    }
+@media only screen and (min-width: 992px) {
 
     #name:hover {
         font-weight: 600;
@@ -134,18 +124,38 @@ a {
     }
 
     #navigation a {
+        cursor: none;
+    }
+}
+
+/* Navigation & Header ab Desktop/Tablet */
+
+@media only screen and (min-width: 600px) {
+
+    #top {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 2%;
+        text-decoration: none;
+        position: fixed;
+        width: 96%;
+        background-color: black;
+        padding-top: 2%;
+        z-index: 10;
+    }
+
+    #navigation a {
         color: white;
         padding: 1%;
         display: inline-block;
         padding: 0px 20px;
         text-decoration: none;
-        cursor: none;
     }
 }
 
-/* Navigation & Header bis 768px (mobile) */
+/* Navigation & Header mobil */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
 
     #navigation a {
         color: white;
@@ -169,10 +179,18 @@ a {
 
 }
 
-/* Cursor ab 768px */
+/* Cursor Desktop */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
     
+    body {
+        cursor: none;
+    }
+
+    a:hover {
+        cursor: none;
+    }
+
     .cursor {
         pointer-events: none;
         position: fixed;
@@ -186,9 +204,9 @@ a {
 
 }
 
-/* Startseite ab 768px */
+/* Startseite Desktop */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
 
     .image {
         display: none;
@@ -221,17 +239,454 @@ a {
         display: none;
     }
 
+    .project-tablet-container {
+        display: none;
+    }
+
 }
 
-/* Startseite bis 768px (mobile) */
+/* Startseite Tablet */
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (min-width: 600px) and (max-width: 992px) {
 
     .project {
         display: none;
     }
 
     .image {
+        display: none;
+    }
+
+    .project-mobile-container {
+        display: none;
+    }
+
+    .project-tablet-container {
+        display: grid;
+        grid-template-columns: 30% 25% 19.5% 19.5%;
+        position: relative;
+        text-decoration: none;
+        overflow: hidden;
+        column-gap: 1em;
+        row-gap: 1em;
+        font-size: 15px;
+        line-height: 1.2;
+    }
+
+    /* Zeile 1 */
+
+    .startseite-tablet-image1 {
+        overflow: hidden;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    
+    .startseite-tablet-image1 > a img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+      }
+
+    .startseite-tablet-text1-name {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .startseite-tablet-text1-kategorie {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .startseite-tablet-text1-jahr {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    /* Zeile 2 */
+    
+    .startseite-tablet-image2 {
+        overflow: hidden;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    
+    .startseite-tablet-image2 > a img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+      }
+
+    .startseite-tablet-text2-name {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .startseite-tablet-text1-kategorie {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .startseite-tablet-text1-jahr {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    /* Zeile 3 */
+    
+    .startseite-tablet-image3 {
+        overflow: hidden;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    
+    .startseite-tablet-image3 > a img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+      }
+
+    .startseite-tablet-text3-name {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .startseite-tablet-text3-kategorie {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .startseite-tablet-text3-jahr {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    /* Zeile 4 */
+    
+    .startseite-tablet-image4 {
+        overflow: hidden;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    
+    .startseite-tablet-image4 > a img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+      }
+
+    .startseite-tablet-text4-name {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .startseite-tablet-text4-kategorie {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .startseite-tablet-text4-jahr {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    /* Zeile 5 */
+    
+    .startseite-tablet-image5 {
+        overflow: hidden;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+    
+    .startseite-tablet-image5 > a img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+      }
+
+    .startseite-tablet-text5-name {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .startseite-tablet-text5-kategorie {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .startseite-tablet-text5-jahr {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+     /* Zeile 6 */
+    
+     .startseite-tablet-image6 {
+        overflow: hidden;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+    
+    .startseite-tablet-image6 > a img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+      }
+
+    .startseite-tablet-text6-name {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+
+    .startseite-tablet-text6-kategorie {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+
+    .startseite-tablet-text6-jahr {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+
+    /* Zeile 7 */
+
+    .startseite-tablet-image7 {
+        overflow: hidden;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+    
+    .startseite-tablet-image7 > a img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+      }
+
+    .startseite-tablet-text7-name {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+
+    .startseite-tablet-text7-kategorie {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+
+    .startseite-tablet-text7-jahr {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+
+    /* Zeile 8 */
+
+    .startseite-tablet-image8 {
+        overflow: hidden;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 8;
+        grid-row-end: 8;
+    }
+    
+    .startseite-tablet-image8 > a img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+      }
+
+    .startseite-tablet-text8-name {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 8;
+        grid-row-end: 8;
+    }
+
+    .startseite-tablet-text8-kategorie {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 8;
+        grid-row-end: 8;
+    }
+
+    .startseite-tablet-text8-jahr {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 8;
+        grid-row-end: 8;
+    }
+
+    /* Zeile 9 */
+
+    .startseite-tablet-image9 {
+        overflow: hidden;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 9;
+        grid-row-end: 9;
+    }
+    
+    .startseite-tablet-image9 > a img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+      }
+
+    .startseite-tablet-text9-name {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 9;
+        grid-row-end: 9;
+    }
+
+    .startseite-tablet-text9-kategorie {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 9;
+        grid-row-end: 9;
+    }
+
+    .startseite-tablet-text9-jahr {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 9;
+        grid-row-end: 9;
+    }
+
+    /* Zeile 10 */
+
+    .startseite-tablet-image10 {
+        overflow: hidden;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 10;
+        grid-row-end: 10;
+    }
+    
+    .startseite-tablet-image10 > a img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+      }
+
+    .startseite-tablet-text10-name {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 10;
+        grid-row-end: 10;
+    }
+
+    .startseite-tablet-text10-kategorie {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 10;
+        grid-row-end: 10;
+    }
+
+    .startseite-tablet-text10-jahr {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 10;
+        grid-row-end: 10;
+    }
+}
+
+/* Startseite mobile */
+
+@media only screen and (max-width: 600px) { 
+
+    .project {
+        display: none;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .project-tablet-container {
         display: none;
     }
 
@@ -491,12 +946,13 @@ a {
 
 /* Info-Seite */
 
-/* Info-Seite ab 768px */
+/* Info-Seite Desktop */
 
 @media only screen and (min-width: 768px) {
 
     .info {
         margin-top: 17px;
+        margin-right: 30%;
     }
     
     b {
@@ -534,7 +990,7 @@ a {
 
 }
 
-/* Info-Seite bis 768px (mobile) */
+/* Info-Seite mobil */
 
 @media only screen and (max-width: 768px) {
     .info {
@@ -550,34 +1006,38 @@ a {
     }
 }
 
+/* Alle Projektseiten */
+
+.info-uni {
+    color: grey;
+    font-size: 14px;
+}
 
 /* Hör die Stille */
  
-/* Hör die Stille ab 768px */
+/* Hör die Stille Desktop */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
 
-    .image-container {
+    .hoerdiestille-text {
+        margin-top: 17px; 
+        font-size: 15px;
+        position: fixed;
+        width: 30%;
+    }
+
+    .hoerdiestille-image-container {
         margin-top: 17px;
         width: 100%;
         overflow: hidden;
         display: grid;
-        grid-template-columns: 31.3% 31.3% 31.3%;
+        grid-template-columns: 31.3% auto auto;
         grid-template-rows: auto;
         column-gap: 1.5em;
         row-gap: 1.4em;
     }
 
     /* Zeile 1 */
-
-    .hoerdiestille-text {
-        grid-column-start: 1;
-        grid-column-end: 1;
-        grid-row-start: 1;
-        grid-row-end: 1; 
-        font-size: 15px;
-        position: fixed;
-    }
 
     .hoerdiestille1 {
         overflow: hidden;
@@ -589,8 +1049,8 @@ a {
 
     .hoerdiestille1 > img {
         object-fit: cover;
-        width: 110%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
     }
 
     .hoerdiestille2 {
@@ -603,8 +1063,8 @@ a {
 
     .hoerdiestille2 > img {
         object-fit: cover;
-        width: 110%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
     }
 
     /* Zeile 2 */
@@ -619,8 +1079,8 @@ a {
 
     .hoerdiestille3 > img {
         object-fit: cover;
-        width: 110%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
     }
 
     /* Zeile 3 */
@@ -635,8 +1095,8 @@ a {
 
     .hoerdiestille4 > img {
         object-fit: cover;
-        width: 110%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
     }
 
     /* Zeile 4 */
@@ -651,8 +1111,8 @@ a {
 
     .hoerdiestille5 > img {
         object-fit: cover;
-        width: 110%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
     }
 
     .hoerdiestille6 {
@@ -665,8 +1125,8 @@ a {
 
     .hoerdiestille6 > img {
         object-fit: cover;
-        width: 110%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
     }
 
     /* Zeile 5 */
@@ -681,8 +1141,8 @@ a {
 
     .hoerdiestille7 > img {
         object-fit: cover;
-        width: 110%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
     }
 
     /* Zeile 6 */
@@ -692,13 +1152,13 @@ a {
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 7;
-        grid-row-end: 7;
+        grid-row-end: 9;
     }
 
-    .hoerdiestille8 > img {
+    .hoerdiestille8 > video {
         object-fit: cover;
-        width: 110%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
     }
 
     .hoerdiestille9 {
@@ -711,25 +1171,47 @@ a {
 
     .hoerdiestille9 > img {
         object-fit: cover;
-        width: 110%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 7 */
+
+    .hoerdiestille10 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 8;
+        grid-row-end: 8;
+    }
+
+    .hoerdiestille10 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
 
     /* Verlinkung nächstes Projekt */
 
-    .nextproject {
+    .hoerdiestille-nextproject {
+        overflow: hidden;
+        grid-column-start: span 3;
+        grid-row-start: 9;
+        grid-row-end: 9;
         text-align: right;
-        margin-top: 30px;
-        margin-right: 30px;
+        font-size: 15px;
     }
-
+    .nextproject b {
+        font-weight: 600;
+        }
+    
 }
 
-/* Startseite bis 768px (mobile) */
+/* Hör die Stille mobil */
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 600px) {
 
-    .image-container {
+    .hoerdiestille-image-container {
         margin-top: 17px;
         width: 100%;
         overflow: hidden;
@@ -737,6 +1219,1181 @@ a {
     
     .hoerdiestille-text {
        padding-bottom: 5%;
+       margin-top: 17px;
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+        padding-bottom: 1em;
+    }
+
+    .hoerdiestille8 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 5%;
+    }
+} 
+
+/* 127 Tipps */
+ 
+/* 127 Tipps Desktop */
+
+@media only screen and (min-width: 600px) {
+
+    .buch-tipps-text {
+        margin-top: 17px; 
+        font-size: 15px;
+        position: fixed;
+        width: 30%;
+    }
+
+    .buch-tipps-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 31.3% auto auto;
+        grid-template-rows: auto;
+        column-gap: 1.5em;
+        row-gap: 1.4em;
+    }
+
+    /* Zeile 1 */
+
+    .buch-tipps1 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .buch-tipps1 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .buch-tipps2 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .buch-tipps2 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 2 */
+
+    .buch-tipps3 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .buch-tipps3 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 3 */
+
+    .buch-tipps4 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .buch-tipps4 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .buch-tipps5 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .buch-tipps5 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+     /* Zeile 4 */
+
+    .buch-tipps6 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .buch-tipps6 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .buch-tipps7 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .buch-tipps7 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 5 */
+
+    .buch-tipps8 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 6;
+    }
+
+    .buch-tipps8 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 6 */
+
+    .buch-tipps9 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 6;
+        grid-row-end: 8;
+    }
+
+    .buch-tipps9 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Verlinkung nächstes Projekt */
+
+    .buch-tipps-nextproject {
+        overflow: hidden;
+        grid-column-start: span 3;
+        grid-row-start: 8;
+        grid-row-end: 8;
+        text-align: right;
+        font-size: 15px;
+    }
+    .nextproject b {
+        font-weight: 600;
+        }
+    
+}
+
+/* 127 Tipps mobil */
+
+@media only screen and (max-width: 600px) {
+
+    .buch-tipps-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .buch-tipps-text {
+       padding-bottom: 5%;
+       margin-top: 17px;
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+        padding-bottom: 1em;
+    }
+
+    .buch-tipps1 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 5%;
+    }
+} 
+
+/* Deja-vu */
+ 
+/* Deja-vu Desktop */
+
+@media only screen and (min-width: 600px) {
+
+    .deja-vu-text {
+        margin-top: 17px; 
+        font-size: 15px;
+        position: fixed;
+        width: 30%;
+    }
+
+    .deja-vu-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 31.3% auto auto;
+        grid-template-rows: auto;
+        column-gap: 1.5em;
+        row-gap: 1.4em;
+    }
+
+    /* Zeile 1 */
+
+    .deja-vu1 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .deja-vu1 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .deja-vu2 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .deja-vu2 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 2 */
+
+    .deja-vu3 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    .deja-vu3 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .deja-vu4 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .deja-vu4 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 3 */
+
+    .deja-vu5 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .deja-vu5 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .deja-vu6 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .deja-vu6 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 4 */
+
+    .deja-vu7 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .deja-vu7 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .deja-vu8 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .deja-vu8 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 5 */
+
+    .deja-vu9 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .deja-vu9 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .deja-vu10 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .deja-vu10 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Verlinkung nächstes Projekt */
+
+    .deja-vu-nextproject {
+        overflow: hidden;
+        grid-column-start: span 3;
+        grid-row-start: 6;
+        grid-row-end: 6;
+        text-align: right;
+        font-size: 15px;
+    }
+    .nextproject b {
+        font-weight: 600;
+        }
+    
+}
+
+/* Deja-vu mobil */
+
+@media only screen and (max-width: 600px) {
+
+    .deja-vu-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .deja-vu-text {
+       padding-bottom: 5%;
+       margin-top: 17px;
+    }
+
+    .deja-vu-image-container img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+        padding-bottom: 1em;
+    }
+} 
+
+/* 3D Alphabet */
+ 
+/* 3D Alphabet Desktop */
+
+@media only screen and (min-width: 600px) {
+
+    .animationen-text {
+        margin-top: 17px; 
+        font-size: 15px;
+        position: fixed;
+        width: 30%;
+    }
+
+    .animationen-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 31.3% auto auto auto;
+        grid-template-rows: auto;
+        column-gap: 1.5em;
+        row-gap: 1.4em;
+    }
+
+    /* Zeile 1 */
+
+    .animationen1 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .animationen1 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen2 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .animationen2 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen3 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .animationen3 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 2 */
+
+    .animationen4 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .animationen4 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen5 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .animationen5 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen6 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .animationen6 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 3 */
+
+    .animationen7 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .animationen7 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen8 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .animationen8 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen9 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .animationen9 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 4 */
+
+    .animationen10 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .animationen10 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen11 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .animationen11 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen12 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .animationen12 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 5 */
+
+    .animationen13 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .animationen13 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen14 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .animationen14 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen15 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .animationen15 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 6 */
+
+    .animationen16 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+
+    .animationen16 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen17 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+
+    .animationen17 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen18 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+
+    .animationen18 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 7 */
+
+    .animationen19 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+
+    .animationen19 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen20 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+
+    .animationen20 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen21 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+
+    .animationen21 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 8 */
+
+    .animationen22 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 8;
+        grid-row-end: 8;
+    }
+
+    .animationen22 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen23 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 8;
+        grid-row-end: 8;
+    }
+
+    .animationen23 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen24 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 8;
+        grid-row-end: 8;
+    }
+
+    .animationen24 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 9 */
+
+    .animationen25 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 9;
+        grid-row-end: 9;
+    }
+
+    .animationen25 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .animationen26 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 9;
+        grid-row-end: 9;
+    }
+
+    .animationen26 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Verlinkung nächstes Projekt */
+
+    .animationen-nextproject {
+        overflow: hidden;
+        grid-column-start: span 4;
+        grid-row-start: 10;
+        grid-row-end: 10;
+        text-align: right;
+        font-size: 15px;
+    }
+    .nextproject b {
+        font-weight: 600;
+        }
+    
+}
+
+/* 3D Alphabet mobil */
+
+@media only screen and (max-width: 600px) {
+
+    .animationen-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .animationen-text {
+       padding-bottom: 5%;
+       margin-top: 17px;
+    }
+
+    .animationen-image-container img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+        padding-bottom: 1em;
+    }
+
+    .animationen-image-container video {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+        padding-bottom: 1em;
+    }
+} 
+
+/* Humboldt */
+ 
+/* Humboldt Desktop */
+
+@media only screen and (min-width: 600px) {
+
+    .humboldt-text {
+        margin-top: 17px; 
+        font-size: 15px;
+        position: fixed;
+        width: 30%;
+    }
+
+    .humboldt-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 31.3% auto auto;
+        grid-template-rows: auto;
+        column-gap: 1.5em;
+        row-gap: 1.4em;
+    }
+
+    /* Zeile 1 */
+
+    .humboldt1 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .humboldt1 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 2 */
+
+    .humboldt2 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    .humboldt2 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 3 */
+
+    .humboldt3 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .humboldt3 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .humboldt4 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+
+    .humboldt4 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 4 */
+
+    .humboldt5 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .humboldt5 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 5 */
+
+    .humboldt6 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .humboldt6 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .humboldt7 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .humboldt7 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 6 */
+
+    .humboldt8 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+
+    .humboldt8 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .humboldt9 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+
+    .humboldt9 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 7 */
+
+    .humboldt10 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 9;
+    }
+
+    .humboldt10 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .humboldt11 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+
+    .humboldt11 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+     /* Zeile 8 */
+
+    .humboldt12 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 8;
+        grid-row-end: 8;
+    }
+
+    .humboldt12 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 9 */
+
+    .humboldt12 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 8;
+        grid-row-end: 8;
+    }
+
+    .humboldt12 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 9 */
+
+    .humboldt13 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 9;
+        grid-row-end: 9;
+    }
+
+    .humboldt13 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .humboldt14 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 9;
+        grid-row-end: 9;
+    }
+
+    .humboldt14 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Verlinkung nächstes Projekt */
+
+    .humboldt-nextproject {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 10;
+        grid-row-end: 10;
+        text-align: right;
+        font-size: 15px;
+    }
+    .nextproject b {
+        font-weight: 600;
+        }
+    
+}
+
+/* Humboldt mobil */
+
+@media only screen and (max-width: 600px) {
+
+    .humboldt-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .humboldt-text {
+       padding-bottom: 5%;
+       margin-top: 17px;
     }
 
     img {
@@ -745,5 +2402,856 @@ a {
         max-height: 100%;
         padding-bottom: 1em;
     }
+} 
 
+/* Wohnen */
+ 
+/* Wohnen Desktop */
+
+@media only screen and (min-width: 600px) {
+
+    .wohnen-text {
+        margin-top: 17px; 
+        font-size: 15px;
+        position: fixed;
+        width: 30%;
+    }
+
+    .wohnen-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 31.3% auto auto auto;
+        grid-template-rows: auto;
+        column-gap: 1.5em;
+        row-gap: 1.4em;
+    }
+
+    /* Zeile 1 */
+
+    .wohnen1 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .wohnen1 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wohnen2 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .wohnen2 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wohnen3 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .wohnen3 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 2 */
+
+    .wohnen4 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .wohnen4 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wohnen5 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .wohnen5 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wohnen6 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .wohnen6 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 3 */
+
+    .wohnen7 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .wohnen7 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wohnen8 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .wohnen8 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wohnen9 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .wohnen9 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 4 */
+
+    .wohnen10 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .wohnen10 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wohnen11 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .wohnen11 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wohnen12 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .wohnen12 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 5 */
+
+    .wohnen13 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .wohnen13 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wohnen14 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .wohnen14 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wohnen15 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .wohnen15 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Verlinkung nächstes Projekt */
+
+    .wohnen-nextproject {
+        overflow: hidden;
+        grid-column-start: span 4;
+        grid-row-start: 6;
+        grid-row-end: 6;
+        text-align: right;
+        font-size: 15px;
+    }
+    .nextproject b {
+        font-weight: 600;
+        }
+    
+}
+
+/* Wohnen mobil */
+
+@media only screen and (max-width: 600px) {
+
+    .wohnen-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .wohnen-text {
+       padding-bottom: 5%;
+       margin-top: 17px;
+    }
+
+    img {
+        object-fit: cover;
+        width: 110%;
+        max-height: 100%;
+        padding-bottom: 1em;
+    }
+} 
+
+/* Aguirre */
+ 
+/* Aguirre Desktop */
+
+@media only screen and (min-width: 600px) {
+
+    .aguirre-text {
+        margin-top: 17px; 
+        font-size: 15px;
+        position: fixed;
+        width: 30%;
+    }
+
+    .aguirre-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 31.3% auto auto;
+        grid-template-rows: auto;
+        column-gap: 1.5em;
+        row-gap: 1.4em;
+    }
+
+    /* Zeile 1 */
+
+    .aguirre1 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .aguirre1 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 2 */
+
+    .aguirre2 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .aguirre2 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .aguirre3 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .aguirre3 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Verlinkung nächstes Projekt */
+
+    .aguirre-nextproject {
+        overflow: hidden;
+        grid-column-start: span 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+        text-align: right;
+        font-size: 15px;
+    }
+    .nextproject b {
+        font-weight: 600;
+        }
+    
+}
+
+/* Aguirre mobil */
+
+@media only screen and (max-width: 600px) {
+
+    .aguirre-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .aguirre-text {
+       padding-bottom: 5%;
+       margin-top: 17px;
+    }
+
+    img {
+        object-fit: cover;
+        width: 110%;
+        max-height: 100%;
+        padding-bottom: 1em;
+    }
+} 
+
+/* Rituale */
+ 
+/* Rituale Desktop */
+
+@media only screen and (min-width: 600px) {
+
+    .rituale-text {
+        margin-top: 17px; 
+        font-size: 15px;
+        position: fixed;
+        width: 30%;
+    }
+
+    .rituale-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 31.3% auto auto auto;
+        grid-template-rows: auto;
+        column-gap: 1.5em;
+        row-gap: 1.4em;
+    }
+
+    /* Zeile 1 */
+
+    .rituale1 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .rituale1 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .rituale2 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .rituale2 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .rituale3 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .rituale3 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 2 */
+
+    .rituale4 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .rituale4 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .rituale5 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .rituale5 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .rituale6 {
+        overflow: hidden;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .rituale6 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Verlinkung nächstes Projekt */
+
+    .rituale-nextproject {
+        overflow: hidden;
+        grid-column-start: span 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+        text-align: right;
+        font-size: 15px;
+    }
+    .nextproject b {
+        font-weight: 600;
+        }
+    
+}
+
+/* Vom Trimmen und Bunkern */
+ 
+/* Vom Trimmen und Bunkern Desktop */
+
+@media only screen and (min-width: 600px) {
+
+    .trimmen-bunkern-text {
+        margin-top: 17px; 
+        font-size: 15px;
+        position: fixed;
+        width: 30%;
+    }
+
+    .trimmen-bunkern-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 31.3% auto auto;
+        grid-template-rows: auto;
+        column-gap: 1.5em;
+        row-gap: 1.4em;
+    }
+
+    /* Zeile 1 */
+
+    .trimmen-bunkern1 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .trimmen-bunkern1 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 2 */
+
+    .trimmen-bunkern2 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .trimmen-bunkern2 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .trimmen-bunkern3 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .trimmen-bunkern3 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 3 */
+
+    .trimmen-bunkern4 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .trimmen-bunkern4 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .trimmen-bunkern5 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .trimmen-bunkern5 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 4 */
+
+    .trimmen-bunkern6 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .trimmen-bunkern6 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .trimmen-bunkern7 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .trimmen-bunkern7 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 5 */
+
+    .trimmen-bunkern8 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .trimmen-bunkern8 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .trimmen-bunkern9 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .trimmen-bunkern9 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 6 */
+
+    .trimmen-bunkern10 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+
+    .trimmen-bunkern10 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .trimmen-bunkern11 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+
+    .trimmen-bunkern11 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 7 */
+
+    .trimmen-bunkern12 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+
+    .trimmen-bunkern12 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .trimmen-bunkern12 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+
+    .trimmen-bunkern12 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 8 */
+
+    .trimmen-bunkern13 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+
+    .trimmen-bunkern13 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .trimmen-bunkern14 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+
+    .trimmen-bunkern14 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Verlinkung nächstes Projekt */
+
+    .trimmen-bunkern-nextproject {
+        overflow: hidden;
+        grid-column-start: span 3;
+        grid-row-start: 8;
+        grid-row-end: 8;
+        text-align: right;
+        font-size: 15px;
+    }
+    .nextproject b {
+        font-weight: 600;
+        }
+    
+}
+
+/* Vom Trimmen und Bunkern mobil */
+
+@media only screen and (max-width: 600px) {
+
+    .trimmen-bunkern-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .trimmen-bunkern-text {
+       padding-bottom: 5%;
+       margin-top: 17px;
+    }
+
+    img {
+        object-fit: cover;
+        width: 110%;
+        max-height: 100%;
+        padding-bottom: 1em;
+    }
+} 
+
+/* Impressum & Datenschutz */
+
+.impressum h1 {
+    font-size: 17px;
+}
+
+.impressum h2 {
+    font-size: 17px;
+}
+.impressum p {
+    font-size: 17px;
+}
+
+.datenschutz {
+    font-size: 17px;
+    line-height: 24px;
+}
+.datenschutz h1 {
+    font-size: 17px;
+}
+.datenschutz h2 {
+    font-size: 17px;
+    font-weight: normal;
+}
+
+/* Impressum & Datenschutz Desktop */
+
+@media only screen and (min-width: 992px) {
+
+    .datenschutz {
+        margin-right: 31%;
+        column-count: 2;
+    }
+}
+
+/* Impressum & Datenschutz Tablet */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+
+    .datenschutz {
+        column-count: 2;
+    }
 }
