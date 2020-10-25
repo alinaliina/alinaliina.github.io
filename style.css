@@ -2786,6 +2786,115 @@ a {
     }
 } 
 
+/* Laola */
+ 
+/* Laola Desktop */
+
+@media only screen and (min-width: 600px) {
+
+    .laola-text {
+        margin-top: 17px; 
+        font-size: 15px;
+        position: fixed;
+        width: 30%;
+    }
+
+    .laola-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 31.3% auto auto;
+        grid-template-rows: auto;
+        column-gap: 1.5em;
+        row-gap: 1.4em;
+    }
+
+    /* Zeile 1 */
+
+    .laola1 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .laola1 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 2 */
+
+    .laola2 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .laola2 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .laola3 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .laola3 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Verlinkung nächstes Projekt */
+
+    .laola-nextproject {
+        overflow: hidden;
+        grid-column-start: span 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+        text-align: right;
+        font-size: 15px;
+    }
+    .nextproject b {
+        font-weight: 600;
+        }
+    
+}
+
+/* Laola mobil */
+
+@media only screen and (max-width: 600px) {
+
+    .laola-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .laola-text {
+       padding-bottom: 5%;
+       margin-top: 17px;
+    }
+
+    .laola1 > video {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+        padding-bottom: 1em;
+    }
+} 
+
 /* Rituale */
  
 /* Rituale Desktop */
