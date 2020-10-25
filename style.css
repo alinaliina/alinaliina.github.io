@@ -1387,8 +1387,8 @@ a {
     .buch-tipps-nextproject {
         overflow: hidden;
         grid-column-start: span 3;
-        grid-row-start: 8;
-        grid-row-end: 8;
+        grid-row-start: 7;
+        grid-row-end: 7;
         text-align: right;
         font-size: 15px;
     }
