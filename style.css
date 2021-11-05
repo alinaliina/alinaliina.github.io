@@ -996,6 +996,204 @@ a {
     font-size: 14px;
 }
 
+/* Graphic Analysis */
+
+/* Graphic Analysis Desktop */
+
+@media only screen and (min-width: 600px) {
+
+    .graphicanalysis-text {
+        margin-top: 17px; 
+        font-size: 15px;
+        position: fixed;
+        width: 30%;
+    }
+
+    .graphicanalysis-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 31.3% auto auto;
+        grid-template-rows: auto;
+        column-gap: 1.5em;
+        row-gap: 1.4em;
+    }
+
+    /* Zeile 1 */
+
+    .graphicanalysis1 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .graphicanalysis1 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .graphicanalysis2 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .graphicanalysis2 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 2 */
+
+    .graphicanalysis3 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .graphicanalysis3 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* Zeile 3 */
+
+    .graphicanalysis4 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .graphicanalysis4 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .graphicanalysis5 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .graphicanalysis5 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 4 */
+
+    .graphicanalysis6 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 6;
+    }
+
+    .graphicanalysis6 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .graphicanalysis7 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .graphicanalysis7 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 5 */
+
+    .graphicanalysis8 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .graphicanalysis8 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Verlinkung nächstes Projekt */
+
+    .graphicanalysis-nextproject {
+        overflow: hidden;
+        grid-column-start: span 3;
+        grid-row-start: 6;
+        grid-row-end: 6;
+        text-align: right;
+        font-size: 15px;
+    }
+    .nextproject b {
+        font-weight: 600;
+        }
+    
+}
+
+/* Graphic Analysis Mobile */
+
+@media only screen and (max-width: 600px) {
+
+    .graphicanalysis-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .graphicanalysis-text {
+       padding-bottom: 5%;
+       margin-top: 17px;
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+        padding-bottom: 1em;
+    }
+
+    .graphicanalysis3 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 5%;
+    }
+
+    .graphicanalysis6 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 5%;
+    }
+} 
+
 /* Hör die Stille */
  
 /* Hör die Stille Desktop */
@@ -1387,8 +1585,8 @@ a {
     .buch-tipps-nextproject {
         overflow: hidden;
         grid-column-start: span 3;
-        grid-row-start: 7;
-        grid-row-end: 7;
+        grid-row-start: 8;
+        grid-row-end: 8;
         text-align: right;
         font-size: 15px;
     }
@@ -2781,6 +2979,115 @@ a {
     img {
         object-fit: cover;
         width: 110%;
+        max-height: 100%;
+        padding-bottom: 1em;
+    }
+} 
+
+/* Laola */
+ 
+/* Laola Desktop */
+
+@media only screen and (min-width: 600px) {
+
+    .laola-text {
+        margin-top: 17px; 
+        font-size: 15px;
+        position: fixed;
+        width: 30%;
+    }
+
+    .laola-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 31.3% auto auto;
+        grid-template-rows: auto;
+        column-gap: 1.5em;
+        row-gap: 1.4em;
+    }
+
+    /* Zeile 1 */
+
+    .laola1 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .laola1 > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Zeile 2 */
+
+    .laola2 {
+        overflow: hidden;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .laola2 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .laola3 {
+        overflow: hidden;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .laola3 > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Verlinkung nächstes Projekt */
+
+    .laola-nextproject {
+        overflow: hidden;
+        grid-column-start: span 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+        text-align: right;
+        font-size: 15px;
+    }
+    .nextproject b {
+        font-weight: 600;
+        }
+    
+}
+
+/* Laola mobil */
+
+@media only screen and (max-width: 600px) {
+
+    .laola-image-container {
+        margin-top: 17px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .laola-text {
+       padding-bottom: 5%;
+       margin-top: 17px;
+    }
+
+    .laola1 > video {
+        object-fit: cover;
+        width: 100%;
         max-height: 100%;
         padding-bottom: 1em;
     }
