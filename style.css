@@ -135,13 +135,16 @@ a {
     #top {
         display: flex;
         justify-content: space-between;
-        padding-bottom: 2%;
+        padding-bottom: 1%;
         text-decoration: none;
         position: fixed;
         width: 96%;
         background-color: white;
         padding-top: 2%;
         z-index: 10;
+        border-bottom-width: 2px;
+        border-bottom-color: black;
+        border-bottom-style: solid;
     }
 
     #navigation a {
@@ -168,13 +171,16 @@ a {
     #top {
         display: flex;
         justify-content: space-between;
-        padding-bottom: 5%;
+        padding-bottom: 3%;
         text-decoration: none;
         position: fixed;
         width: 93%;
         background-color: white;
         padding-top: 5%;
         z-index: 10;
+        border-bottom-width: 2px;
+        border-bottom-color: black;
+        border-bottom-style: solid;
     }
 
 }
