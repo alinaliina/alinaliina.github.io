@@ -32,7 +32,7 @@ a {
 
 @font-face {
   font-family: ArmandGrotesk;
-  src: url(../fonts/ArmandGrotesk2022-Regular.ttf);
+  src: url(https://blobstoragetest92154.blob.core.windows.net/alinastegemann/project_distracted/fonts/ArmandGrotesk2022-Regular.ttf);
 }
 
 html, body {
